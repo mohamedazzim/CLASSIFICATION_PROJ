@@ -1,0 +1,1 @@
+Model directory for saved artifacts. model.pkl is the production model used by the API.

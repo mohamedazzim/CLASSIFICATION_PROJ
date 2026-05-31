@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AutoDash — Vehicle Performance</title>
+  <link rel="stylesheet" href="/frontend/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">AutoDash</div>
+      <nav class="nav">MPG Predictor</nav>
+    </header>
+
+    <main class="main">
+      <section class="card form-card">
+        <h2>MPG Prediction</h2>
+        <p class="muted">Use sample vehicle inputs to predict MPG (demo calls /api/predict)</p>
+        <div class="form-grid">
+          <label>Age (years)<input id="age" type="number" value="5"></label>
+          <label>Mileage (km)<input id="mileage" type="number" value="50000"></label>
+          <label>Horsepower<input id="hp" type="number" value="150"></label>
+          <label>Weight (kg)<input id="weight" type="number" value="1400"></label>
+        </div>
+        <button id="predict">Predict MPG</button>
+      </section>
+
+      <section class="card result-card">
+        <h2>Prediction</h2>
+        <div id="result" class="result">No prediction yet</div>
+        <div id="metrics" class="metrics"></div>
+      </section>
+
+      <section class="card metrics-card">
+        <h2>Vehicle Performance</h2>
+        <div class="metric">Acceleration: <span id="acc">7.6s</span></div>
+        <div class="metric">Top Speed: <span id="top">220 km/h</span></div>
+        <div class="metric">Emissions Estimate: <span id="emis">145 g/km</span></div>
+      </section>
+    </main>
+
+    <footer class="footer">© AutoDash</footer>
+  </div>
+  <script src="/frontend/app.js"></script>
+</body>
+</html>
