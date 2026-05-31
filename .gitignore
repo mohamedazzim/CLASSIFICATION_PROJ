@@ -6,5 +6,3 @@ __pycache__/
 .venv/
 node_modules/
 *.log
-models/*.pkl
-!backend/app/models/model.pkl
